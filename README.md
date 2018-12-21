@@ -4,9 +4,9 @@ play around with spring boot + typescript
 
 # Todos
 
-* enable auto reload: just edit file (JS/TS) and automatically changes visible in browser (no keystroke needed)
-* use yarn to manage dependencies
-* use webpack to create bundle (use import statement in JS files)
+* [x] enable auto reload: just edit file (JS/TS) and automatically changes visible in browser (no keystroke needed)
+* [ ] use yarn to manage dependencies
+* [ ] use webpack to create bundle (use import statement in JS files)
 
 # enable auto reload
 
@@ -26,3 +26,8 @@ play around with spring boot + typescript
 ## for typescript
 
 * !!! in preferences / language & frameworks / typescript -> enable "recompile on changes"
+
+# webpack tutorial
+
+* `npm init -y`
+* `npm install webpack webpack-cli --save-dev`
