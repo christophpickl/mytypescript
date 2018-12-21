@@ -6,5 +6,5 @@ export interface Person {
 }
 
 export function greet(person: Person): string {
-    return "Hi " + person.firstName + " " + person.lastName + "!";
+    return "Hello " + person.firstName + " " + person.lastName + "!";
 }
