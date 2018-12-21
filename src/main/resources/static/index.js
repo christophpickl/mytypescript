@@ -3,7 +3,7 @@
 import { greet } from "./service.js";
 console.log("hello from index.ts");
 window.addEventListener('load', function () {
-    let person = { firstName: "Christoph", lastName: "Doe" };
+    let person = { firstName: "Christoph", lastName: "Smith" };
     document.getElementById("output").innerText = greet(person);
 }, false);
 document.getElementById("btnShowAlert").addEventListener("click", function () {

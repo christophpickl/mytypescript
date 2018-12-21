@@ -4,7 +4,10 @@ play around with spring boot + typescript
 
 * upgrade your local npm version via: `brew upgrade npm`
 * update modules via: `npm i npm`
-* install typescript for npm: `npm install -g typescript`
+* install typescript for npm:
+    * nope ... `npm install -g typescript`
+    * or is it a: `sudo npm i -g typescript`? 🤔
+    * maybe: `npm install typescript-tools --save-dev`?
 
 # Todos
 
@@ -63,5 +66,7 @@ play around with spring boot + typescript
 * write some `*.spec.ts` test
 * add a script to `package.json` to run tests: `"test": "mocha -r ts-node/register src/**/*.spec.ts"`
 * now simply run: `npm test`
+
+* clean and transpile first? `"test": "npm run clean && npm run tsc && mocha -r ts-node/register src/main/resources/static/**/*.spec.ts"`
 
 * help: https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2

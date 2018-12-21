@@ -1,5 +1,5 @@
 import {greet, Person} from "./service.js";
-import { expect } from 'chai';
+import {expect} from 'chai';
 import 'mocha';
 
 describe('greet function', () => {
@@ -11,3 +11,4 @@ describe('greet function', () => {
     });
 
 });
+

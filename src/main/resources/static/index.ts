@@ -5,7 +5,7 @@ import {greet, Person} from "./service.js";
 console.log("hello from index.ts");
 
 window.addEventListener('load', function () {
-    let person: Person = {firstName: "Christoph", lastName: "Doe"};
+    let person: Person = {firstName: "Christoph", lastName: "Smith"};
     document.getElementById("output").innerText = greet(person);
 }, false);
 
