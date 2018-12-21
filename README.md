@@ -2,11 +2,17 @@
 
 play around with spring boot + typescript
 
+* run `npm-check` to update dependency versions
+
 # Todos
 
-* [x] enable auto reload: just edit file (JS/TS) and automatically changes visible in browser (no keystroke needed)
-* [ ] use yarn to manage dependencies
-* [ ] use webpack to create bundle (use import statement in JS files)
+* [x] YES: enable auto reload: just edit file (JS/TS) and automatically changes visible in browser (no keystroke needed)
+* [x] NOPE: use yarn to manage dependencies
+    - decided to stick with npm
+* [X] NOPE: use webpack to create bundle (use import statement in JS files)
+    - alternative: use javascript modules in browser instead
+* [ ] run tests (mocha + chai)
+* [ ] integrate with gradle (test+build)
 
 # enable auto reload
 
@@ -27,7 +33,23 @@ play around with spring boot + typescript
 
 * !!! in preferences / language & frameworks / typescript -> enable "recompile on changes"
 
-# webpack tutorial
+# javascript modules
 
-* `npm init -y`
-* `npm install webpack webpack-cli --save-dev`
+* add in your HTML page: `<script type="module" src="/index.js"></script>`
+* in your `index.ts` add reference to other files: `import {greet, Person} from "./service.js";` (the .js at the end IS important!)
+* in your `tsconfig.json` set: `"module": "es6"`
+* this will fire a new request in the browser 😃
+
+# dependency manager
+
+## which one?
+
+* npm (the community standard so far) or yarn (facebook's own, had been better)
+* npm => https://iamturns.com/yarn-vs-npm-2018/
+
+## npm help
+
+* to get dependecy updater:
+    1. install the needed module: `npm install npm-check --save-dev`
+    1. add a script to `package.json`: `"upgrade-interactive": "npm-check --update"`
+    1. then run: `npm run upgrade-interactive`
