@@ -2,7 +2,9 @@
 
 play around with spring boot + typescript
 
-* run `npm-check` to update dependency versions
+* upgrade your local npm version via: `brew upgrade npm`
+* update modules via: `npm i npm`
+* install typescript for npm: `npm install -g typescript`
 
 # Todos
 
@@ -11,7 +13,8 @@ play around with spring boot + typescript
     - decided to stick with npm
 * [X] NOPE: use webpack to create bundle (use import statement in JS files)
     - alternative: use javascript modules in browser instead
-* [ ] run tests (mocha + chai)
+* [ ] run tests with mocha (framework) + chai (assertion lib)
+    - [ ] move spec.ts files into src/test folder
 * [ ] integrate with gradle (test+build)
 
 # enable auto reload
@@ -53,3 +56,12 @@ play around with spring boot + typescript
     1. install the needed module: `npm install npm-check --save-dev`
     1. add a script to `package.json`: `"upgrade-interactive": "npm-check --update"`
     1. then run: `npm run upgrade-interactive`
+
+# testing
+
+* install the modules: `npm install chai mocha ts-node @types/chai @types/mocha --save-dev`
+* write some `*.spec.ts` test
+* add a script to `package.json` to run tests: `"test": "mocha -r ts-node/register src/**/*.spec.ts"`
+* now simply run: `npm test`
+
+* help: https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
