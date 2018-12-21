@@ -8,6 +8,8 @@ play around with spring boot + typescript
     * nope ... `npm install -g typescript`
     * or is it a: `sudo npm i -g typescript`? 🤔
     * maybe: `npm install typescript-tools --save-dev`?
+    * FINALLY: `npm install typescript --save` this solved it 👏
+    
 
 # Todos
 
@@ -19,6 +21,9 @@ play around with spring boot + typescript
 * [ ] run tests with mocha (framework) + chai (assertion lib)
     - [ ] move spec.ts files into src/test folder
 * [ ] integrate with gradle (test+build)
+* add some libs:
+    * [ ] `import * as _ from "lodash"  // import * as _ from "lodash" // npm install @types/lodash`
+    * [ ] `import * as $ from "jquery" // npm install @types/jquery`
 
 # enable auto reload
 
@@ -69,4 +74,10 @@ play around with spring boot + typescript
 
 * clean and transpile first? `"test": "npm run clean && npm run tsc && mocha -r ts-node/register src/main/resources/static/**/*.spec.ts"`
 
+* problems running tests:
+    - import not valid:
+        - change the module type in `tsconfig.json` to: commonjs
+    * export not valid:
+        - maybe `npm i -D ts-mocha` or `npm i -D @types/mocha @types/expect` did the trick?
 * help: https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
+* OOP style tests: https://www.npmjs.com/package/mocha-typescript
